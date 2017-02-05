@@ -1,19 +1,12 @@
 $(document).ready(function(){
-
-
-
-  // $("#color-button").on("click", function(){
-  //   $.ajax({
-  //     url: '/colors/random',
-  //     type: 'GET',
-  //     dataType: 'JSON'
-  //   })
-  //   .done(function(response){
-  //     cell = response[0].cell;
-  //     color = response[1].color;
-
-  //     $(".cells li:nth-child(" + cell +")").css("background-color", color)
-
-  //   })
-  // })
+  $("#color-button").on("click", function(){
+    var section = $(this).parent();
+    $.ajax({
+      url: '/',
+      method: 'post'
+    })
+    .done(function(response){
+      section.append(response);
+    });
+  });
 });

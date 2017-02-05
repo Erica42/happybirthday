@@ -94,3 +94,7 @@ button {
 .round-bottom-right {
   border-bottom-right-radius: 1em;
 }
+
+.hidden{
+  display: none
+}
